@@ -1,14 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import { Route, Routes } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Sign_up from "./pages/Sign-up";
+import Help from "./pages/Help";
 
 function App() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>
-        Click me
-        <X />
-      </Button>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<Sign_up />} />
+        <Route path="/help" element={<Help />} />
+      </Routes>
+    </>
   );
 }
 
